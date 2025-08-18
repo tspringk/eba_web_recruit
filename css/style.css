@@ -42,8 +42,14 @@ global > font
 ------------------------------
 */
 :root {
+  --color-font-base: var(--color-text1);
   --font-family-base: "Helvetica Neue", Arial, "Noto Sans JP",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+  --text-h2: 600 40px/1.2 var(--font-family-base);
+  --text-h4: 600 24px/1.5 var(--font-family-base);
+  --text-Text16_R: 400 16px/1.5 var(--font-family-base);
+  --text-Text16_B: 600 16px/1.5 var(--font-family-base);
 }
 
 /*!
@@ -348,6 +354,54 @@ body {
 
 #message__container {
   width: var(--base-container-width);
-  /* height: 500px; */
   background-color: #c0c;
+}
+
+.presentation__container {
+  padding: 40px 25px;
+}
+.presentation__headerText {
+  font: var(--text-h2);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#requirements__container {
+  width: var(--base-container-width);
+  background-color: var(--color-blue100);
+}
+
+#requirements__container .presentation__item {
+  width: 100%;
+  padding: 24px 40px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+#requirements__container .requirements__itemName {
+  font: var(--text-h4);
+  margin-bottom: 10px;
+}
+
+#requirements__container .requirements__itemDescription {
+  font: var(--text-Text16_R);
+  margin-bottom: 24px;
+}
+
+#requirements__container .requirements__itemTags {
+  display: flex;
+}
+
+#requirements__container .requirements__itemTag {
+  padding: 8px;
+  margin-right: 8px;
+  font: var(--text-Text16_B);
+  color: var(--color-text2);
+  background-color: var(--color-blue300);
+}
+
+#requirements__container .requirements__itemTag.inexperienced {
+  color: var(--color-blue400);
+  background-color: var(--color-blue100);
 }
