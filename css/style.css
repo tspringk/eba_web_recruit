@@ -3,7 +3,28 @@ global > color
 ------------------------------
 */
 :root {
-  --color-font-base: #333;
+  --color-text1: #001c54;
+  --color-text2: #ffffff;
+  --color-Accent1: ##ffc72d;
+  --color-Accent2: ##ffeab1;
+
+  --color-Ac1: ##ffc72d;
+  --color-CV1: ##ffeab1;
+  --color-CV2: ##ffc72d;
+  --color-TEXT-Ghost: ##001c54;
+
+  --color-white: #ffffff;
+  --color-blue50: #f5fbff;
+  --color-blue100: #cdefff;
+  --color-blue200: #7dd8ff;
+  --color-blue300: #4bc6ff;
+  --color-blue400: #1ab3fe;
+  --color-blue500: #01aafe;
+  --color-blue600: #018edc;
+  --color-blue700: #0171ba;
+  --color-blue800: #005598;
+  --color-blue900: #003876;
+  --color-blue1000: #001c54;
 }
 
 /*!
@@ -11,8 +32,9 @@ global > content-width
 ------------------------------
 */
 :root {
-  --width-content-s: 920px;
-  --width-content: 1080px;
+  --base-page-width: 100%;
+  --base-wrapper-width: 1440px;
+  --base-container-width: 960px;
 }
 
 /*!
@@ -20,8 +42,8 @@ global > font
 ------------------------------
 */
 :root {
-  --font-family-base: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  --font-family-base: "Helvetica Neue", Arial, "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 /*!
@@ -282,13 +304,50 @@ page > top > top-common
 page > top > top-kv
 ------------------------------
 */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-blue100);
+}
+#page__wrapper,
+#contents__wrapper,
+#message__wrapper {
+  width: var(--base-wrapper-width);
+  background-color: var(--color-blue200);
+}
 
-/*!
-page > about > about-common
-------------------------------
-*/
+#header__container {
+  display: flex;
+  width: var(--base-container-width);
+  height: 72px;
+  background-color: #993;
+}
 
-/*!
-page > about > about-kv
-------------------------------
-*/
+#siteid__container {
+  width: 20%;
+  background-color: #933;
+}
+
+#gnavi__container {
+  width: 80%;
+}
+
+#contents__wrapper {
+  background-color: var(--color-blue300);
+}
+
+#kv__container {
+  width: var(--base-container-width);
+  /* height: 500px; */
+  background-color: #ccc;
+}
+
+#message__wrapper {
+  background-color: var(--color-blue400);
+}
+
+#message__container {
+  width: var(--base-container-width);
+  /* height: 500px; */
+  background-color: #c0c;
+}
