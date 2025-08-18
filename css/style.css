@@ -5,13 +5,13 @@ global > color
 :root {
   --color-text1: #001c54;
   --color-text2: #ffffff;
-  --color-Accent1: ##ffc72d;
-  --color-Accent2: ##ffeab1;
+  --color-Accent1: #ffc72d;
+  --color-Accent2: #ffeab1;
 
-  --color-Ac1: ##ffc72d;
-  --color-CV1: ##ffeab1;
-  --color-CV2: ##ffc72d;
-  --color-TEXT-Ghost: ##001c54;
+  --color-Ac1: #ffc72d;
+  --color-CV1: #ffeab1;
+  --color-CV2: #ffc72d;
+  --color-TEXT-Ghost: #001c54;
 
   --color-white: #ffffff;
   --color-blue50: #f5fbff;
@@ -357,14 +357,57 @@ body {
   background-color: #c0c;
 }
 
+/* presentation common styles */
+
 .presentation__container {
-  padding: 40px 25px;
+  padding: 80px 25px 40px;
 }
 .presentation__headerText {
   font: var(--text-h2);
   text-align: center;
   margin-bottom: 40px;
 }
+
+.presentation__itemDescription {
+  font: var(--text-Text16_R);
+}
+
+/* communication */
+
+#communication__container {
+  width: var(--base-container-width);
+  background-color: var(--color-white);
+  padding-bottom: 120px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#communication__container .presentation__headerText span {
+  color: var(--color-Accent1);
+}
+
+#communication__container .presentation__items {
+  display: flex;
+  justify-content: space-between;
+}
+#communication__container .presentation__item {
+  width: 472px;
+}
+
+#communication__container .presentation__itemImage {
+  display: block;
+  width: 100%;
+  height: calc(472px / 16 * 9);
+  background-color: #ccc;
+  margin-bottom: 16px;
+}
+
+#communication__container .presentation__itemHeaderText {
+  font: var(--text-h4);
+  margin-bottom: 4px;
+}
+
+/* requirements */
 
 #requirements__container {
   width: var(--base-container-width);
