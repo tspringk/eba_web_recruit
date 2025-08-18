@@ -32,8 +32,9 @@ global > content-width
 ------------------------------
 */
 :root {
-  --width-content-s: 920px;
-  --width-content: 1080px;
+  --base-page-width: 100%;
+  --base-wrapper-width: 1440px;
+  --base-container-width: 960px;
 }
 
 /*!
@@ -41,8 +42,8 @@ global > font
 ------------------------------
 */
 :root {
-  --font-family-base: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  --font-family-base: "Helvetica Neue", Arial, "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 /*!
@@ -303,13 +304,50 @@ page > top > top-common
 page > top > top-kv
 ------------------------------
 */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-blue100);
+}
+#page__wrapper,
+#contents__wrapper,
+#message__wrapper {
+  width: var(--base-wrapper-width);
+  background-color: var(--color-blue200);
+}
 
-/*!
-page > about > about-common
-------------------------------
-*/
+#header__container {
+  display: flex;
+  width: var(--base-container-width);
+  height: 72px;
+  background-color: #993;
+}
 
-/*!
-page > about > about-kv
-------------------------------
-*/
+#siteid__container {
+  width: 20%;
+  background-color: #933;
+}
+
+#gnavi__container {
+  width: 80%;
+}
+
+#contents__wrapper {
+  background-color: var(--color-blue300);
+}
+
+#kv__container {
+  width: var(--base-container-width);
+  /* height: 500px; */
+  background-color: #ccc;
+}
+
+#message__wrapper {
+  background-color: var(--color-blue400);
+}
+
+#message__container {
+  width: var(--base-container-width);
+  /* height: 500px; */
+  background-color: #c0c;
+}
