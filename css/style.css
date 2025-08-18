@@ -3,7 +3,28 @@ global > color
 ------------------------------
 */
 :root {
-  --color-font-base: #333;
+  --color-text1: #001c54;
+  --color-text2: #ffffff;
+  --color-Accent1: ##ffc72d;
+  --color-Accent2: ##ffeab1;
+
+  --color-Ac1: ##ffc72d;
+  --color-CV1: ##ffeab1;
+  --color-CV2: ##ffc72d;
+  --color-TEXT-Ghost: ##001c54;
+
+  --color-white: #ffffff;
+  --color-blue50: #f5fbff;
+  --color-blue100: #cdefff;
+  --color-blue200: #7dd8ff;
+  --color-blue300: #4bc6ff;
+  --color-blue400: #1ab3fe;
+  --color-blue500: #01aafe;
+  --color-blue600: #018edc;
+  --color-blue700: #0171ba;
+  --color-blue800: #005598;
+  --color-blue900: #003876;
+  --color-blue1000: #001c54;
 }
 
 /*!
