@@ -368,8 +368,77 @@ body {
   margin-bottom: 40px;
 }
 
+.presentation__itemHeaderText {
+  font: var(--text-h4);
+}
+
+.presentation__itemText,
 .presentation__itemDescription {
   font: var(--text-Text16_R);
+}
+
+.presentation__headerText span {
+  color: var(--color-Accent1);
+}
+
+/* interview */
+
+#interview__container {
+  width: var(--base-container-width);
+  background-color: var(--color-blue100);
+  padding-bottom: 120px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#interview__container .presentation__headerText {
+  margin-bottom: 24px;
+}
+
+#interview__container .presentation__itemText {
+  font-weight: 600;
+  display: block;
+  float: left;
+  margin-right: 8px;
+}
+
+#interview__container .presentation__itemDescription {
+  clear: left;
+  padding-top: 16px;
+}
+
+#interview__container .presentation__items {
+  display: flex;
+  justify-content: space-between;
+}
+#interview__container .presentation__item {
+  width: 294px;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 0 4px rgba(0, 28, 84, 15%);
+}
+
+#interview__container .presentation__item dl {
+  padding: 24px 24px 0;
+}
+
+#interview__container .presentation__item:nth-child(odd) {
+  margin-top: 40px;
+}
+
+#interview__container .presentation__itemImage {
+  display: block;
+  width: 100%;
+  height: calc(294px / 16 * 9);
+  background-color: #ccc;
+  margin-bottom: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+#interview__container .link__type2 {
+  font: var(--text-Text16_B);
+  text-align: right;
+  margin: 8px 24px 24px;
 }
 
 /* communication */
@@ -380,10 +449,6 @@ body {
   padding-bottom: 120px;
   padding-left: 0;
   padding-right: 0;
-}
-
-#communication__container .presentation__headerText span {
-  color: var(--color-Accent1);
 }
 
 #communication__container .presentation__items {
