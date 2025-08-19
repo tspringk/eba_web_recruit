@@ -50,6 +50,7 @@ global > font
   --text-h4: 600 24px/1.5 var(--font-family-base);
   --text-Text16_R: 400 16px/1.5 var(--font-family-base);
   --text-Text16_B: 600 16px/1.5 var(--font-family-base);
+  --text-Text18_B: 600 18px/1.5 var(--font-family-base);
 }
 
 /*!
@@ -375,10 +376,119 @@ body {
 .presentation__itemText,
 .presentation__itemDescription {
   font: var(--text-Text16_R);
+  text-justify: inter-ideograph;
+  text-align: justify;
 }
 
 .presentation__headerText span {
   color: var(--color-Accent1);
+}
+
+.link__type1 {
+  display: block;
+  font: 500 12px/2 var(--font-family-base);
+  margin: auto;
+  padding: 16px;
+  border: 2px solid var(--color-text1);
+}
+
+/* strength */
+
+#strength__container {
+  width: var(--base-container-width);
+  background-color: var(--color-blue100);
+  padding: 80px 8px;
+  /* margin-bottom: 24px; */
+}
+#strength__container .presentation__headerText {
+  margin-bottom: 48px;
+}
+#strength__container .presentation__itemHeaderText {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#strength__container .presentation__itemHeaderText h2 {
+  font: inherit;
+}
+
+#strength__container .presentation__itemHeaderText span {
+  color: var(--color-blue400);
+}
+
+#strength__container .presentation__items {
+  display: flex;
+  margin-bottom: 24px;
+}
+#strength__container .presentation__item {
+  width: 272px;
+  padding: 16px 24px 0;
+  border-right: 1px dotted rgba(0, 28, 84, 0.2);
+}
+
+#strength__container .presentation__itemImage {
+  width: 100%;
+  height: 152px;
+  border-radius: 12px;
+  background-color: #ccc;
+  margin: 0 auto 24px;
+}
+
+/* welfare */
+
+#welfare__container {
+  width: var(--base-container-width);
+  background-color: var(--color-white);
+  padding: 40px 8px;
+  margin-bottom: 120px;
+}
+#welfare__container .presentation__headerText span {
+  color: var(--color-blue400);
+}
+#welfare__container .presentation__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+#welfare__container .presentation__item {
+  width: calc(204px + 32px);
+  padding: 16px 0 0;
+  border-bottom: 1px dotted rgba(0, 28, 84, 0.2);
+}
+#welfare__container .presentation__item:nth-child(n + 5) {
+  border-bottom: none;
+}
+
+#welfare__container .presentation__itemInner {
+  min-height: 383px;
+  border-right: 1px dotted rgba(0, 28, 84, 0.2);
+  margin-bottom: 16px;
+}
+
+#welfare__container .presentation__item:nth-child(4n) .presentation__itemInner {
+  border-right: none;
+}
+
+#welfare__container .presentation__itemHeaderText {
+  font: var(--text-Text18_B);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#welfare__container .presentation__itemImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 auto 16px;
+}
+
+#welfare__container .presentation__itemDescription {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /* interview */
