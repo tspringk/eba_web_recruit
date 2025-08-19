@@ -76,6 +76,8 @@ global > font
   --text-h1: 600 64px/1.2 var(--font-family-base);
   --text-h2: 600 40px/1.2 var(--font-family-base);
   --text-h4: 600 24px/1.5 var(--font-family-base);
+  --text-Text12_B: 600 14px/1.2 var(--font-family-base);
+  --text-Text14_B: 600 14px/1.5 var(--font-family-base);
   --text-Text16_R: 400 16px/1.5 var(--font-family-base);
   --text-Text16_B: 600 16px/2 var(--font-family-base);
   --text-Text18_B: 600 18px/1.5 var(--font-family-base);
@@ -353,20 +355,42 @@ body {
 
 #header__container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: var(--base-container-width);
-  height: 72px;
-  background-color: #993;
-
-  display: none;
+  padding: 16px 0;
+  margin: 0 auto;
 }
 
 #siteid__container {
-  width: 20%;
-  background-color: #933;
+  /* width: 20%; */
 }
 
-#gnavi__container {
-  width: 80%;
+#navi__items {
+  display: flex;
+}
+#navi__items ul {
+  display: flex;
+  align-items: center;
+}
+
+#navi__items li {
+  margin-right: 24px;
+}
+
+#navi__items a {
+  font: var(--text-Text14_B);
+}
+
+#navi__items .link__entry {
+  padding: 10px 24px;
+  font: var(--text-Text12_B);
+}
+#navi__items .link__entry.unexperienced {
+  background-color: var(--color-CV1);
+}
+#navi__items .link__entry.experienced {
+  background-color: var(--color-CV2);
 }
 
 #contents__wrapper {
