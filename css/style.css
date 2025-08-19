@@ -356,6 +356,8 @@ body {
   width: var(--base-container-width);
   height: 72px;
   background-color: #993;
+
+  display: none;
 }
 
 #siteid__container {
@@ -600,12 +602,16 @@ body {
 
 /* interview */
 
+#interview__wrapper {
+  width: var(--base-wrapper-width);
+  background: var(--backgroundImage-base);
+  background-image: url(../img/bg_interview.png);
+}
+
 #interview__container {
   width: var(--base-container-width);
-  background-color: var(--color-blue100);
-  padding-bottom: 120px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 80px 8px 120px;
+  margin: 0 auto;
 }
 #interview__container .presentation__headerText {
   margin-bottom: 24px;
@@ -662,10 +668,8 @@ body {
 
 #communication__container {
   width: var(--base-container-width);
-  background-color: var(--color-white);
-  padding-bottom: 120px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 80px 0 120px;
+  margin: 0 auto;
 }
 
 #communication__container .presentation__items {
@@ -674,6 +678,8 @@ body {
 }
 #communication__container .presentation__item {
   width: 472px;
+  min-height: 420px;
+  background-color: var(--color-white);
 }
 
 #communication__container .presentation__itemImage {
@@ -686,14 +692,23 @@ body {
 
 #communication__container .presentation__itemHeaderText {
   font: var(--text-h4);
+  padding: 0 24px;
   margin-bottom: 4px;
+}
+#communication__container .presentation__itemDescription {
+  padding: 0 24px 24px;
 }
 
 /* requirements */
 
+#requirements__wrapper {
+  width: var(--base-wrapper-width);
+  background-color: var(--color-blue100);
+}
+
 #requirements__container {
   width: var(--base-container-width);
-  background-color: var(--color-blue100);
+  margin: 0 auto;
 }
 
 #requirements__container .presentation__item {
