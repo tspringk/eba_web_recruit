@@ -46,10 +46,11 @@ global > font
   --font-family-base: "Helvetica Neue", Arial, "Noto Sans JP",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 
+  --text-h1: 600 64px/1.2 var(--font-family-base);
   --text-h2: 600 40px/1.2 var(--font-family-base);
   --text-h4: 600 24px/1.5 var(--font-family-base);
   --text-Text16_R: 400 16px/1.5 var(--font-family-base);
-  --text-Text16_B: 600 16px/1.5 var(--font-family-base);
+  --text-Text16_B: 600 16px/2 var(--font-family-base);
   --text-Text18_B: 600 18px/1.5 var(--font-family-base);
 }
 
@@ -341,21 +342,79 @@ body {
 
 #contents__wrapper {
   background-color: var(--color-blue300);
+  padding-top: 70px;
 }
 
-#kv__container {
-  width: var(--base-container-width);
-  /* height: 500px; */
-  background-color: #ccc;
+#kv__wrapper {
+  width: var(--base-wrapper-width);
+  padding: 70px 0;
 }
+#kv__wrapperInner {
+  width: var(--base-container-width);
+  display: flex;
+  justify-content: right;
+}
+#kv__container {
+  width: 272px;
+  color: white;
+}
+
+#kv__container .kv__headerText {
+  font: var(--text-h1);
+}
+#kv__container .kv__messageText {
+  font: var(--text-Text16_B);
+  margin-bottom: 24px;
+}
+
+button.link__type3 {
+  font: var(--text-h4);
+  background-color: var(--color-Accent1);
+  padding: 20px 16px;
+  border-radius: 8px;
+  color: var(--color-TEXT-Ghost);
+}
+
+#vision__wrapper {
+  width: var(--base-container-width);
+  display: flex;
+  justify-content: center;
+  padding: 70px 0 240px;
+}
+#vision__container {
+  width: 430px;
+  color: var(--color-white);
+}
+#vision__container .vision__header {
+  font: var(--text-h2);
+}
+#vision__container .vision__messageText {
+  font: var(--text-Text16_B);
+}
+
+/* message */
 
 #message__wrapper {
   background-color: var(--color-blue400);
+  padding: 80px 0 138px;
+}
+
+#message__wrapperInner {
+  width: var(--base-container-width);
+  display: flex;
+  justify-content: right;
 }
 
 #message__container {
-  width: var(--base-container-width);
-  background-color: #c0c;
+  width: 430px;
+  text-align: center;
+}
+
+#message__container .message__text {
+  font: var(--text-Text16_B);
+}
+#message__container .message__signature {
+  margin: 24px auto;
 }
 
 /* presentation common styles */
