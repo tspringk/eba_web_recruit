@@ -392,6 +392,50 @@ body {
   border: 2px solid var(--color-text1);
 }
 
+/* strength */
+
+#strength__container {
+  width: var(--base-container-width);
+  background-color: var(--color-blue100);
+  padding: 80px 8px;
+  /* margin-bottom: 24px; */
+}
+#strength__container .presentation__headerText {
+  margin-bottom: 48px;
+}
+#strength__container .presentation__itemHeaderText {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#strength__container .presentation__itemHeaderText h2 {
+  font: inherit;
+}
+
+#strength__container .presentation__itemHeaderText span {
+  color: var(--color-blue400);
+}
+
+#strength__container .presentation__items {
+  display: flex;
+  margin-bottom: 24px;
+}
+#strength__container .presentation__item {
+  width: 272px;
+  padding: 16px 24px 0;
+  border-right: 1px dotted rgba(0, 28, 84, 0.2);
+}
+
+#strength__container .presentation__itemImage {
+  width: 100%;
+  height: 152px;
+  border-radius: 12px;
+  background-color: #ccc;
+  margin: 0 auto 24px;
+}
+
 /* welfare */
 
 #welfare__container {
