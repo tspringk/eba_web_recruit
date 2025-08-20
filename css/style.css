@@ -308,7 +308,7 @@ utility
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .pc-only {
     display: none;
   }
@@ -893,7 +893,7 @@ For smartphone
   }
   #kv__wrapper {
     padding-top: 0;
-    background: linear-gradient(180deg, #75d5ff, #01aafe 90%, #f5fbff 90%);
+    background: linear-gradient(180deg, #75d5ff, #01aafe 88%, #f5fbff 90%);
   }
   #kv__wrapperInner {
     width: 100%;
@@ -1126,7 +1126,7 @@ For smartphone
   #interview__container .presentation__itemImage {
     display: block;
     width: var(--interview__container__width);
-    height: calc(var(interview__container__width) / 16 * 9);
+    height: auto;
     background-color: #ccc;
     margin-bottom: 1em;
     border-top-left-radius: 16px;
@@ -1237,5 +1237,71 @@ For smartphone
   #requirements__container .requirements__itemTag.inexperienced {
     color: var(--color-blue400);
     background-color: var(--color-blue100);
+  }
+
+  /* footer */
+
+  #footer__wrapper {
+    /* width: var(--base-wrapper-width);
+    background-color: var(--color-blue600);
+    padding: 40px 0 24px;
+    color: var(--color-white); */
+    padding: 2em 0;
+    /* display: flex;
+    justify-content: center; */
+  }
+
+  #pageContents__index {
+    /* width: 600px; */
+    width: 90%;
+
+    /* display: flex;
+    margin: 0 auto 80px; */
+
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto 1em;
+    /* background-color: #ccc; */
+  }
+  #pageContents__index dl {
+    width: 40%;
+    margin: 0 auto 1em;
+  }
+
+  #pageContents__index dt {
+    font: var(--text-Text16_B);
+    margin-bottom: 0.25em;
+  }
+
+  #pageContents__index dd {
+    font: var(--text-Text14_R);
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 1em;
+    margin-bottom: 0.25em;
+  }
+
+  #site__linkIndex {
+    width: var(--base-container-width);
+    /* margin: 0 auto 24px; */
+    margin-bottom: 1em;
+  }
+
+  #site__linkIndex ul {
+    /* display: flex;
+    column-gap: 40px;
+    justify-content: center; */
+    display: block;
+  }
+
+  #site__linkIndex li {
+    text-align: center;
+    font: var(--text-Text14_R);
+    margin-bottom: 0.75em;
+  }
+
+  #copyright__declaration {
+    font: var(--text-Text12_B);
+    text-align: center;
   }
 }
