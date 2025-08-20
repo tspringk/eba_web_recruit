@@ -75,6 +75,7 @@ global > font
 
   --text-h1: 600 64px/1.2 var(--font-family-base);
   --text-h2: 600 40px/1.2 var(--font-family-base);
+  --text-h3: 600 32px/1.5 var(--font-family-base);
   --text-h4: 600 24px/1.5 var(--font-family-base);
   --text-Text12_R: 400 12px/1.2 var(--font-family-base);
   --text-Text12_B: 600 12px/1.2 var(--font-family-base);
@@ -300,6 +301,22 @@ utility
   margin: -1px !important;
 }
 
+.pc-only {
+  display: block;
+}
+.sp-only {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+}
+
 /*!
 component > button
 ------------------------------
@@ -512,6 +529,10 @@ body {
 
 .presentation__headerText span {
   color: var(--color-Accent1);
+}
+
+.presentation__itemLink {
+  display: flex;
 }
 
 /* strength */
@@ -817,4 +838,83 @@ body {
 #copyright__declaration {
   font: var(--text-Text12_B);
   text-align: center;
+}
+
+/*
+For smartphone
+*/
+
+@media screen and (max-width: 375px) {
+  :root {
+    --base-container-width: 90%;
+  }
+
+  #siteid__container {
+    margin: 0;
+  }
+  #navi__items {
+    display: none;
+  }
+  #kv__wrapper {
+    padding-top: 0;
+    background: linear-gradient(180deg, #75d5ff, #01aafe 90%, #f5fbff 90%);
+  }
+  #kv__wrapperInner {
+    width: 100%;
+    padding: 70% 0 0;
+    background-position: 0% 0%;
+    background-size: 135%;
+  }
+
+  #kv__container {
+    width: 70%;
+    margin: auto;
+  }
+
+  #kv__container .presentation__itemLink {
+    justify-content: center;
+  }
+
+  #kv__container .link__type3 {
+    padding: 4% 8%;
+    font-size: 1.1rem;
+  }
+
+  #vision__wrapper {
+    background-position: bottom center;
+    background-size: 100% !important;
+  }
+  #vision__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .presentation__headerText {
+    font-size: 2rem !important;
+    margin-bottom: 1.2rem;
+  }
+
+  .vision__messageText {
+    margin-bottom: 1em;
+  }
+
+  #message__wrapper {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+  #message__wrapperInner {
+    width: 100%;
+    display: block;
+  }
+
+  #message__figure {
+    width: 90%;
+    margin: 0 auto 1.5em;
+  }
+
+  #message__container {
+    width: 85%;
+    margin: auto;
+  }
 }
