@@ -76,7 +76,9 @@ global > font
   --text-h1: 600 64px/1.2 var(--font-family-base);
   --text-h2: 600 40px/1.2 var(--font-family-base);
   --text-h4: 600 24px/1.5 var(--font-family-base);
-  --text-Text12_B: 600 14px/1.2 var(--font-family-base);
+  --text-Text12_R: 400 12px/1.2 var(--font-family-base);
+  --text-Text12_B: 600 12px/1.2 var(--font-family-base);
+  --text-Text14_R: 400 14px/1.2 var(--font-family-base);
   --text-Text14_B: 600 14px/1.5 var(--font-family-base);
   --text-Text16_R: 400 16px/1.5 var(--font-family-base);
   --text-Text16_B: 600 16px/2 var(--font-family-base);
@@ -400,8 +402,7 @@ body {
 #kv__wrapper {
   width: var(--base-wrapper-width);
   padding-top: 70px;
-  background-color: none;
-  background: linear-gradient(180deg, #75d5ff, #01aafe 9%, #f5fbff 16%);
+  background: linear-gradient(180deg, #75d5ff, #01aafe 50%, #f5fbff 85%);
 }
 #kv__wrapperInner {
   width: var(--base-container-width);
@@ -416,7 +417,7 @@ body {
 }
 #kv__container {
   width: 272px;
-  margin-right: 30px;
+  margin-right: 20px;
   color: white;
 }
 
@@ -758,8 +759,9 @@ body {
 }
 
 #requirements__container .requirements__itemTag {
-  padding: 8px;
+  padding: 4px 8px;
   margin-right: 8px;
+  border-radius: 4px;
   font: var(--text-Text16_B);
   color: var(--color-text2);
   background-color: var(--color-blue300);
@@ -768,4 +770,51 @@ body {
 #requirements__container .requirements__itemTag.inexperienced {
   color: var(--color-blue400);
   background-color: var(--color-blue100);
+}
+
+/* footer */
+
+#footer__wrapper {
+  width: var(--base-wrapper-width);
+  background-color: var(--color-blue600);
+  padding: 40px 0 24px;
+  color: var(--color-white);
+}
+
+#pageContents__index {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 80px;
+}
+
+#pageContents__index dt {
+  font: var(--text-Text16_B);
+}
+
+#pageContents__index dd {
+  font: var(--text-Text16_R);
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 1em;
+}
+
+#site__linkIndex {
+  width: var(--base-container-width);
+  margin: 0 auto 24px;
+}
+
+#site__linkIndex ul {
+  display: flex;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+#site__linkIndex li {
+  font: var(--text-Text14_R);
+}
+
+#copyright__declaration {
+  font: var(--text-Text12_B);
+  text-align: center;
 }
