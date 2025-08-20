@@ -381,12 +381,72 @@ body {
   margin: 0 auto;
 }
 
-#siteid__container {
-  /* width: 20%; */
+/* ここから下がハンバーガーメニューに関するCSS */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
 }
 
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: none;
+  /* display: flex; */
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100; /* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#navi__container {
+}
 #navi__items {
   display: flex;
+  justify-content: right;
+  align-items: center;
 }
 #navi__items ul {
   display: flex;
@@ -401,14 +461,14 @@ body {
   font: var(--text-Text14_B);
 }
 
-#navi__items .link__entry {
+.link__entry {
   padding: 10px 24px;
   font: var(--text-Text12_B);
 }
-#navi__items .link__entry.unexperienced {
+.link__entry.unexperienced {
   background-color: var(--color-CV1);
 }
-#navi__items .link__entry.experienced {
+.link__entry.experienced {
   background-color: var(--color-CV2);
 }
 
@@ -847,50 +907,101 @@ For smartphone
 @media screen and (max-width: 767px) {
   :root {
     --base-container-width: 90vw;
-  }
-
-  :root {
     --strength__container__width: 85vw;
+    --interview__container__width: 85vw;
+    --communication__container__width: 85vw;
   }
 
   .presentation__container {
-    /* padding: 80px 25px 40px; */
     padding: 2rem 0 2rem;
   }
   .presentation__headerText {
-    /* font: var(--text-h2);
-    text-align: center;
-    margin-bottom: 40px; */
     margin-bottom: 2rem;
   }
 
-  /* .presentation__itemHeaderText {
-    font: var(--text-h4);
-  }
-
-  .presentation__itemText,
-  .presentation__itemDescription {
-    font: var(--text-Text16_R);
-    text-justify: inter-ideograph;
-    text-align: justify;
-  }
-
-  .presentation__headerText span {
-    color: var(--color-Accent1);
-  }
-
-  .presentation__itemLink {
-    display: flex;
-  } */
-
   /**/
 
+  #header__container {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
   #siteid__container {
-    margin: 0;
+    float: left;
+    position: relative;
+    z-index: 999;
+    margin: 1rem 0 1rem 1rem;
   }
+  #siteid__container img {
+    width: auto;
+  }
+
+  .drawer_open {
+    display: flex;
+    float: right;
+  }
+
+  #drawer_input:checked ~ #navi__items {
+    top: 0%;
+  }
+
+  #navi__container {
+    display: block;
+  }
+
   #navi__items {
-    display: none;
+    clear: both;
+    /* display: flex; */
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* margin-top: 4rem; */
+    padding-top: 5rem;
+    top: -100%;
+    left: 0;
+    z-index: 99;
+    transition: 0.25s;
+    background-color: rgba(255, 255, 255, 0.9);
   }
+  #navi__items ul {
+    /* display: flex;
+    align-items: center; */
+    display: block;
+  }
+
+  #navi__items li {
+    margin: 0 0 1rem;
+    padding: 0 0 1rem 1rem;
+    border-bottom: 1px dotted var(--color-TEXT-Ghost);
+  }
+
+  #navi__items a {
+    font: var(--text-Text14_B);
+  }
+
+  #link__entries {
+    display: flex;
+    margin: 0 1rem;
+    column-gap: 0.5rem;
+    justify-content: space-between;
+  }
+  #navi__items .link__entry {
+    width: 100%;
+    padding: 1em 0;
+    /* padding: 10px 24px; */
+    font: var(--text-Text12_B);
+  }
+  #navi__items .link__entry.unexperienced {
+    background-color: var(--color-CV1);
+  }
+  #navi__items .link__entry.experienced {
+    background-color: var(--color-CV2);
+  }
+
+  /* key visual */
+
   #kv__wrapper {
     padding-top: 0;
     background: linear-gradient(180deg, #75d5ff, #01aafe 88%, #f5fbff 90%);
@@ -1101,9 +1212,6 @@ For smartphone
     /* justify-content: space-between; */
     display: block;
   }
-  :root {
-    --interview__container__width: 85vw;
-  }
   #interview__container .presentation__item {
     /* width: 294px; */
     width: var(--interview__container__width);
@@ -1159,7 +1267,7 @@ For smartphone
     /* width: 472px;
     min-height: 420px; */
     background-color: var(--color-white);
-    width: var(--interview__container__width);
+    width: var(--communication__container__width);
     min-height: auto;
     margin: 0 auto 1em;
   }
@@ -1167,7 +1275,7 @@ For smartphone
   #communication__container .presentation__itemImage {
     display: block;
     width: 100%;
-    height: calc(var(--interview__container__width) / 16 * 9);
+    height: calc(var(--communication__container__width) / 16 * 9);
     background-color: #ccc;
     margin-bottom: 16px;
   }
