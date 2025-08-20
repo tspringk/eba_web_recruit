@@ -853,9 +853,9 @@ For smartphone
     --strength__container__width: 85vw;
   }
 
-  presentation__container {
+  .presentation__container {
     /* padding: 80px 25px 40px; */
-    padding: 4rem 0 2rem;
+    padding: 2rem 0 2rem;
   }
   .presentation__headerText {
     /* font: var(--text-h2);
@@ -1002,8 +1002,8 @@ For smartphone
   /* welfare */
 
   #welfare__container {
-    padding: 2em 0 1em;
-    margin: 0 auto 2em;
+    padding: 0 0 1em;
+    margin: 0 auto;
   }
   #welfare__container .presentation__headerText {
     margin-bottom: 1rem;
@@ -1061,5 +1061,181 @@ For smartphone
   #welfare__container .presentation__itemDescription {
     padding-left: 1em;
     padding-right: 1em;
+  }
+
+  /* interview */
+
+  #interview__wrapper {
+    /* width: var(--base-wrapper-width);
+    background: var(--backgroundImage-base);
+    background-image: url(../img/bg_interview.png); */
+  }
+
+  #interview__container {
+    /* width: var(--base-container-width);
+    padding: 80px 8px 120px;
+    margin: 0 auto; */
+    padding: 4rem 0 0;
+  }
+  #interview__container .presentation__headerText {
+    /* margin-bottom: 24px; */
+    margin-bottom: 1em;
+  }
+
+  #interview__container .presentation__itemText {
+    font-weight: 600;
+    display: block;
+    float: left;
+    /* margin-right: 8px; */
+    margin-right: 0.5em;
+  }
+
+  #interview__container .presentation__itemDescription {
+    clear: left;
+    /* padding-top: 16px; */
+    padding-top: 0.5em;
+  }
+
+  #interview__container .presentation__items {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    display: block;
+  }
+  :root {
+    --interview__container__width: 85vw;
+  }
+  #interview__container .presentation__item {
+    /* width: 294px; */
+    width: var(--interview__container__width);
+    background-color: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0 0 4px rgba(0, 28, 84, 15%);
+    margin: 0 auto 2em;
+  }
+
+  #interview__container .presentation__item dl {
+    /* padding: 24px 24px 0; */
+    padding: 0 1.5em 1.5em;
+  }
+
+  #interview__container .presentation__item:nth-child(odd) {
+    /* margin-top: 40px; */
+    margin-top: 0;
+  }
+
+  #interview__container .presentation__itemImage {
+    display: block;
+    width: var(--interview__container__width);
+    height: calc(var(interview__container__width) / 16 * 9);
+    background-color: #ccc;
+    margin-bottom: 1em;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  #interview__container .link__type2 {
+    font: var(--text-Text16_B);
+    text-align: right;
+    /* margin: 8px 24px 24px; */
+    margin: 0;
+    display: none;
+  }
+
+  /* communication */
+
+  #communication__container {
+    width: var(--base-container-width);
+    /* padding: 80px 0 120px; */
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+
+  #communication__container .presentation__items {
+    /* display: flex;
+    justify-content: space-between; */
+    display: block;
+  }
+  #communication__container .presentation__item {
+    /* width: 472px;
+    min-height: 420px; */
+    background-color: var(--color-white);
+    width: var(--interview__container__width);
+    min-height: auto;
+    margin: 0 auto 1em;
+  }
+
+  #communication__container .presentation__itemImage {
+    display: block;
+    width: 100%;
+    height: calc(var(--interview__container__width) / 16 * 9);
+    background-color: #ccc;
+    margin-bottom: 16px;
+  }
+
+  #communication__container .presentation__itemHeaderText {
+    font: var(--text-h4);
+    /* padding: 0 24px;
+    margin-bottom: 4px; */
+    padding: 0 1rem;
+    margin-bottom: 0.2em;
+  }
+  #communication__container .presentation__itemDescription {
+    /* padding: 0 24px 24px; */
+    padding: 0 1rem 1rem;
+  }
+
+  /* requirements */
+
+  #requirements__wrapper {
+    width: var(--base-wrapper-width);
+    background-color: var(--color-blue100);
+  }
+
+  #requirements__container {
+    width: var(--base-container-width);
+    margin: 0 auto;
+  }
+
+  #requirements__container .presentation__item {
+    width: 100%;
+    /* padding: 24px 40px;
+    margin-bottom: 40px; */
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  #requirements__container .requirements__itemName {
+    font: var(--text-h4);
+    line-height: 1.3;
+    /* margin-bottom: 10px; */
+    margin-bottom: 0.5em;
+  }
+
+  #requirements__container .requirements__itemDescription {
+    font: var(--text-Text16_R);
+    /* margin-bottom: 24px; */
+    margin-bottom: 1em;
+  }
+
+  #requirements__container .requirements__itemTags {
+    display: flex;
+  }
+
+  #requirements__container .requirements__itemTag {
+    /* padding: 4px 8px;
+    margin-right: 8px; */
+    border-radius: 4px;
+    font: var(--text-Text16_B);
+    color: var(--color-text2);
+    background-color: var(--color-blue300);
+    padding: 0.2em 0.8em;
+    margin-right: 0.5em;
+  }
+
+  #requirements__container .requirements__itemTag.inexperienced {
+    color: var(--color-blue400);
+    background-color: var(--color-blue100);
   }
 }
