@@ -400,8 +400,7 @@ body {
 #kv__wrapper {
   width: var(--base-wrapper-width);
   padding-top: 70px;
-  background-color: none;
-  background: linear-gradient(180deg, #75d5ff, #01aafe 9%, #f5fbff 16%);
+  background: linear-gradient(180deg, #75d5ff, #01aafe 50%, #f5fbff 85%);
 }
 #kv__wrapperInner {
   width: var(--base-container-width);
@@ -416,7 +415,7 @@ body {
 }
 #kv__container {
   width: 272px;
-  margin-right: 30px;
+  margin-right: 20px;
   color: white;
 }
 
