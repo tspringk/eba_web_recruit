@@ -1185,7 +1185,7 @@ For smartphone
   /* welfare */
 
   #welfare__container {
-    padding: 0 0 1em;
+    padding: 3rem 1rem;
     margin: 0 auto;
   }
   #welfare__container .presentation__headerText {
@@ -1195,13 +1195,15 @@ For smartphone
     color: var(--color-blue400);
   }
   #welfare__container .presentation__items {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: block;
     margin-bottom: 2em;
   }
   #welfare__container .presentation__item {
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
     padding: 0;
     margin-top: 0;
     margin-bottom: 2%;
@@ -1215,7 +1217,7 @@ For smartphone
 
   #welfare__container .presentation__itemInner {
     min-height: 98%;
-    border-right: 1px dotted rgba(0, 28, 84, 0.2);
+    /* border-right: 1px dotted rgba(0, 28, 84, 0.2); */
     padding-top: 1em;
     margin-top: 0em;
     margin-bottom: 1em;
@@ -1227,14 +1229,15 @@ For smartphone
   }
 
   #welfare__container .presentation__itemHeaderText {
-    font: var(--text-Text18_B);
+    /* font: var(--text-Text18_B); */
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 1em;
-    min-height: 3em;
+    /* min-height: 3em; */
   }
 
   #welfare__container .presentation__itemImage {
-    width: 70%;
+    width: 50%;
     height: auto;
     border-radius: 50%;
     background-color: var(--color-blue100);
