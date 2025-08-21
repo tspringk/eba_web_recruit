@@ -394,7 +394,9 @@ body {
 #header__container {
   position: sticky;
   top: 0;
-  padding: 16px 0;
+  padding-top: 16px;
+  height: 72px;
+  background-color: rgb(125, 216, 255, 0.8);
 }
 
 #header__containerInner {
@@ -405,20 +407,35 @@ body {
   margin: 0 auto;
 }
 
+#siteid__container img {
+  width: 130px;
+}
+
 @media screen and (min-width: 768px) {
   #header__container.scrolled {
-    padding-top: 8px;
-  }
-  #header__container.scrolled #navi__items {
-    transition: 0.1s linear;
-    transform: scale(0.9);
-    transform-origin: 100% 0%;
+    padding-top: 4px;
+    height: 46px;
+    transition: 0.05s ease-out;
   }
 
-  #header__container.scrolled #siteid__container {
-    transition: 0.1s linear;
-    transform: scale(0.9);
-    transform-origin: 0% 0%;
+  #header__container.scrolled #navi__items li {
+    margin-right: 18px;
+    margin-top: -4px;
+  }
+
+  #header__container.scrolled #navi__items a {
+    font-size: 10px;
+    transition: 0.1s ease-out;
+  }
+
+  #header__container.scrolled .link__entry {
+    padding: 4px 18px;
+    font-size: 9px;
+  }
+
+  #header__container.scrolled #siteid__container img {
+    width: 98px;
+    transition: 0.1s ease-out;
   }
 }
 
@@ -485,7 +502,7 @@ body {
 
 #navi__items a {
   font: var(--text-Text14_B);
-  transition: 0.25s linear;
+  transition: color 0.25s linear;
 }
 
 #navi__items a:hover {
@@ -497,7 +514,6 @@ body {
 .link__entry {
   padding: 10px 24px;
   font: var(--text-Text12_B);
-  transition: var(--base-transition-settings);
 }
 .link__entry.unexperienced {
   background-color: var(--color-CV1);
@@ -973,16 +989,26 @@ For smartphone
     display: block;
     width: 100%;
     padding: 0;
+    background-color: rgb(125, 216, 255, 0.8);
+    height: auto;
   }
 
   #siteid__container {
     float: left;
     position: relative;
     z-index: 999;
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 0;
   }
-  #siteid__container img {
-    width: auto;
+
+  #header__container.scrolled #siteid__container img {
+    width: 98px;
+    transition: 0.1s ease-out;
+  }
+
+  #header__container.scrolled .drawer_open {
+    width: 48px;
+    height: 48px;
+    transition: 0.1s ease-out;
   }
 
   .drawer_open {
@@ -1009,7 +1035,7 @@ For smartphone
     left: 0;
     z-index: 99;
     transition: 0.25s;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(125, 216, 255, 0.8);
   }
   #navi__items ul {
     display: block;
