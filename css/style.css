@@ -970,11 +970,11 @@ For smartphone
   /**/
 
   #header__container {
-    position: relative;
     display: block;
     width: 100%;
     padding: 0;
   }
+
   #siteid__container {
     float: left;
     position: relative;
