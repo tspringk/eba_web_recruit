@@ -1195,8 +1195,8 @@ For smartphone
   }
 
   #strength__container .presentation__itemImage {
-    width: var(--strength__container__width);
-    height: calc(var(--strength__container__width) / 16 * 9);
+    /* width: var(--strength__container__width); */
+    /* height: calc(var(--strength__container__width) / 16 * 9); */
   }
 
   #strength__container .presentation__itemDescription {
