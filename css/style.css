@@ -37,7 +37,8 @@ global > link_type
 
 .link__type1 {
   display: block;
-  font: 500 12px/2 var(--font-family-base);
+  font: var(--text-Text14_B);
+  text-align: center;
   margin: auto;
   padding: 16px;
   border: 2px solid var(--color-text1);
@@ -291,6 +292,7 @@ iframe {
 foundation > base
 ------------------------------
 */
+
 body {
   line-height: 1.8;
   font-size: 16px;
@@ -511,19 +513,24 @@ body {
 
 /* entry buttons on header */
 
-.link__entry {
+#link__entries {
+  display: flex;
+}
+#link__entries .link__entry {
+  display: block;
+  text-align: center;
   padding: 10px 24px;
   font: var(--text-Text12_B);
   transition: 0.25s linear;
 }
-.link__entry.unexperienced {
+#link__entries .link__entry.unexperienced {
   background-color: var(--color-CV1);
 }
-.link__entry.experienced {
+#link__entries .link__entry.experienced {
   background-color: var(--color-CV2);
 }
 
-.link__entry:hover {
+#link__entries .link__entry:hover {
   filter: var(--link-hover-behavior);
 }
 
@@ -606,8 +613,8 @@ body {
   margin: 40px;
 }
 #message__container {
-  width: 430px;
-  margin-right: 54px;
+  width: 440px;
+  margin-right: 44px;
   text-align: center;
 }
 
@@ -620,6 +627,10 @@ body {
   width: auto;
   height: 40px;
   margin: 24px auto;
+}
+
+#message__container .link__type1 {
+  width: 80%;
 }
 
 /* presentation common styles */
@@ -777,7 +788,7 @@ body {
   margin: 0 auto;
 }
 #interview__container .presentation__headerText {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 #interview__container .presentation__itemText {
@@ -804,11 +815,11 @@ body {
 }
 
 #interview__container .presentation__item dl {
-  padding: 24px 24px 0;
+  padding: 24px 24px 24px;
 }
 
 #interview__container .presentation__item:nth-child(odd) {
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 #interview__container .presentation__itemImage {
@@ -842,6 +853,7 @@ body {
 #communication__container .presentation__item {
   width: 472px;
   min-height: 420px;
+  padding-bottom: 1.5em;
   background-color: var(--color-white);
 }
 
@@ -860,6 +872,10 @@ body {
 }
 #communication__container .presentation__itemDescription {
   padding: 0 24px 24px;
+}
+
+#communication__container .link__type1 {
+  width: 80%;
 }
 
 /* requirements */
@@ -908,6 +924,10 @@ body {
 #requirements__container .requirements__itemTag.inexperienced {
   color: var(--color-blue400);
   background-color: var(--color-blue100);
+}
+
+#requirements__container .link__type1 {
+  font: var(--text-Text18_B);
 }
 
 /* footer */

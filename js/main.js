@@ -4,6 +4,15 @@ const elems = {
 
 document.addEventListener("DOMContentLoaded", () => {
   elems.headerContainer = document.querySelector("#header__container");
+
+  // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //   anchor.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     document.querySelector(this.getAttribute("href")).scrollIntoView({
+  //       behavior: "smooth",
+  //     });
+  //   });
+  // });
 });
 
 window.addEventListener("scroll", () => {
