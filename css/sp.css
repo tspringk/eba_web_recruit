@@ -1,0 +1,277 @@
+
+
+/* スマホ向けCSS */
+@media screen and (max-width:767px) {
+
+body{
+	-webkit-text-size-adjust: 100%;
+}
+
+/**************** ヘッダー内コンテンツ *****************/
+
+
+header{
+	width:100%;
+	height:100vh;
+	background:url(../images/main_image.jpg)no-repeat 56% top;
+	background-size:cover;
+}
+
+.saiyou_header{
+	position:fixed;
+	top:-10%;
+	left:0;
+	width:100%;
+	z-index:100;
+}
+
+.saiyou_header ul{
+	display:flex;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.saiyou_header ul li{
+	width:25%;
+	text-align:center;
+}
+
+.saiyou_header ul li a{
+	padding:3% 0;
+	color:#FFFFFF;
+	font-weight:600;
+	font-size:85%;
+	letter-spacing:0.1em;
+	text-decoration:none;
+	display:block;
+}
+
+.saiyou_header ul li a.bg_color01{
+	background:#a6937c;
+}
+
+.saiyou_header ul li a.bg_color01:hover{
+	background:#C4AC90;
+}
+
+.saiyou_header ul li a.bg_color02{
+	background:#00a0e9;
+}
+
+.saiyou_header ul li a.bg_color02:hover{
+	background:#29B0ED;
+}
+
+.saiyou_header ul li a.bg_color03{
+	background:#13b5b1;
+}
+
+.saiyou_header ul li a.bg_color03:hover{
+	background:#31D9D5;
+}
+
+.saiyou_header ul li a.bg_color04{
+	background:#a9c927;
+}
+
+.saiyou_header ul li a.bg_color04:hover{
+	background:#C0E03E;
+}
+
+.saiyou_header ul li a.bg_color05{
+	background:#eb6877;
+}
+
+.saiyou_header ul li a.bg_color05:hover{
+	background:#F78B97;
+}
+
+.header_top{
+	width:100%;
+	padding: 1% 0;
+}
+
+.main_image_inner_contents{
+	position:relative;
+	height:100%;
+}
+
+.main_image_inner_contents h2{
+	color:#FFFFFF;
+	position:absolute;
+	top:15%;
+	right:10%;
+	margin:0;
+	-ms-writing-mode:tb-rl;
+	writing-mode:vertical-rl;
+	letter-spacing:0.7em;
+    font-size:400%;
+    font-weight:500;
+	line-height:1;
+	opacity:0;
+	white-space:nowrap;
+}
+
+.main_image_inner_contents h2 span{
+	 font-size:30%;
+	 letter-spacing:0.8em;
+}
+
+/**************** ヘッダー内コンテンツ end *****************/
+
+
+/**************** メインコンテンツ *****************/
+main{
+	background:#FFFFFF;
+	overflow: hidden;
+}
+/**************** メインコンテンツ end *****************/
+
+
+/**************** content01 *****************/
+
+#content01{
+	background:url(../images/content01_bg.jpg)no-repeat center top;
+	background-size:cover;
+}
+
+.content01_inner{
+	width:80%;
+	margin:0 auto;
+	padding:20% 0;
+}
+
+.content01_inner h3{
+	-ms-writing-mode:tb-rl;
+	writing-mode:vertical-rl;
+	letter-spacing:0.1em;
+	line-height:1.8;
+    font-size:200%;
+    font-weight:700;
+	color:#1F1F1F;
+	margin:0;
+	width:69%;
+	height:15em;
+}
+
+.content01_inner h3 br{
+	display:none;
+}
+
+.ceo_message{
+	width:100%;
+    padding:10% 0;
+}
+
+.ceo_message_text{
+	font-size:140%;
+    font-weight:600;
+	color:#1F1F1F;
+	line-height:2;
+}
+
+.ceo_name{
+	font-size:140%;
+    font-weight:600;
+	color:#1F1F1F;
+	text-align:right;
+	width: 60%;
+    margin:3em 0 0 auto;
+}
+
+.ceo_name img{
+	width:100%;
+}
+
+/**************** content01 end *****************/
+
+
+/**************** content02 *****************/
+
+#content02{
+	background:url(../images/content02_bg.jpg)no-repeat 43%;
+	background-size:cover;
+	padding:20% 0;
+}
+
+#content02 h3{
+	-ms-writing-mode:tb-rl;
+	writing-mode:vertical-rl;
+	letter-spacing:0.1em;
+	line-height:1.8;
+    font-size:200%;
+    font-weight:700;
+	color:#FFFFFF;
+	margin:0;
+	width:76%;
+}
+
+.content02_inner{
+	width:70%;
+	margin:0 auto;
+	padding-bottom:10%;
+}
+
+.content02_inner_l{
+	width:100%;
+	padding:10% 0;
+}
+.content02_inner_r{
+	width:100%;
+}
+
+.content02_inner_l h4,
+.content02_inner_r h4{
+	font-size:200%;
+    font-weight:600;
+	letter-spacing:0.2em;
+	color:#FFFFFF;
+	text-align: center;
+}
+
+.content02_inner_l ul,
+.content02_inner_r ul{
+	padding-left:3em;
+}
+
+.content02_inner_l li,
+.content02_inner_r li{
+	font-size:140%;
+    font-weight:500;
+	color:#FFFFFF;
+	line-height:2;
+}
+
+/**************** content02 end *****************/
+
+
+/**************** eba_yt *****************/
+
+#eba_yt{
+	position:relative;
+	/*padding-bottom:56.25%;*/
+	padding-bottom:400px;
+	height:0;
+	overflow:hidden;
+}
+ 
+#eba_yt iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/**************** eba_yt end *****************/
+
+
+/**************** sns *****************/
+.sns{
+	display:none;
+}
+/**************** sns end *****************/
+
+
+}

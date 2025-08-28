@@ -59,8 +59,15 @@
     <meta property="fb:app_id" content="189188888374760" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="./js/media_queries.js" defer></script>
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <div id="page__wrapper">
@@ -374,63 +381,269 @@
 
             <!-- interview -->
             <div id="interview__wrapper">
-              <section
-                id="interview__container"
-                class="presentation__container"
-              >
+              <div id="interview__container" class="presentation__container">
                 <h1 class="presentation__headerText">
                   <span>社員</span>インタビュー
                 </h1>
 
                 <div class="presentation__items">
-                  <section class="presentation__item">
-                    <img
-                      src="./img/img_member_01.png"
-                      alt="R.Oさんの写真"
-                      class="presentation__itemImage"
-                    />
-                    <dl>
-                      <dt class="presentation__itemHeaderText">R.O</dt>
-                      <dd class="presentation__itemText">営業</dd>
-                      <dd class="presentation__itemText">入社：2024年4月</dd>
-                      <dd class="presentation__itemDescription">
-                        社員の個人生活を尊重し、健やかで幸せな家庭づくりを応援しています。結婚祝い金は、こうした社員一人ひとりの大切なイベントを支えるために設けられた制度です。
-                      </dd>
-                    </dl>
-                  </section>
-                  <section class="presentation__item">
-                    <img
-                      src="./img/img_member_02.png"
-                      alt="Y.Kさんの写真"
-                      class="presentation__itemImage"
-                    />
-                    <dl>
-                      <dt class="presentation__itemHeaderText">Y.K</dt>
-                      <dd class="presentation__itemText">エンジニア</dd>
-                      <dd class="presentation__itemText">入社：2017年11月</dd>
-                      <dd class="presentation__itemDescription">
-                        ハローワークでいくつかの会社を探し面談して頂いたなかで、1番社長の人柄がよくて社員のことをよく見て考えていると感じたから。また、会社の将来性だけでなく自身の将来や成長についても考えていると感じたため。
-                      </dd>
-                    </dl>
-                  </section>
+                  <div class="slides__container">
+                    <div class="swiper">
+                      <div id="interview__container" class="swiper-wrapper">
+                        <!-- member 01 -->
+                        <div class="swiper-slide">
+                          <section class="presentation__item">
+                            <div class="presentation__itemImage">
+                              <img
+                                src="./img/members/img_member_01.png"
+                                alt="R.Oさんの写真"
+                              />
+                            </div>
 
-                  <section class="presentation__item">
-                    <img
-                      src="./img/img_member_03.png"
-                      alt="T.Kさんの写真"
-                      class="presentation__itemImage"
-                    />
-                    <dl>
-                      <dt class="presentation__itemHeaderText">T.K</dt>
-                      <dd class="presentation__itemText">営業</dd>
-                      <dd class="presentation__itemText">入社：2016年10月</dd>
-                      <dd class="presentation__itemDescription">
-                        行政機関にて主に国主導のスポーツイベント開催に向けた準備業務（企画、連絡調整、PR活動など）。その他にもスポーツ指導、スポーツイベント運営、英語指導などの教育関係に従事。
-                      </dd>
-                    </dl>
-                  </section>
+                            <dl>
+                              <dt class="presentation__itemHeaderText">R.O</dt>
+                              <dd class="presentation__itemText">営業</dd>
+                              <dd class="presentation__itemText">
+                                入社：2024年4月
+                              </dd>
+                              <dd
+                                class="interview_contents presentation__itemDescription"
+                              >
+                                <section class="interview__content">
+                                  <h3>前職</h3>
+                                  <p>
+                                    パソコン業界にて接客販売から広報・
+                                    購買業務に携わりました。接客販売では、お客様の潜在ニーズを引き出して最適な商品とサービスを提案。広報業務ではプレスリリースの配信やメディア対応を通じて、企業のブランディング向上に注力。購買業務では商品の調達・
+                                    在庫管理
+                                    仕入れやコスト管理をおこなっていました。
+                                  </p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>業務内容</h3>
+                                  <p>
+                                    様々な企業とエンジニアのマッチングを担当するSES営業に携わっています。
+                                    双方のニーズをヒアリングし、双方が納得する形でマッチングできるよう心がけて営業活
+                                    動を行っています。
+                                  </p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>EBAテックを選んだ理由</h3>
+                                  <p>
+                                    面接で社長や課長の人柄の良さに強く惹かれたためです。
+                                    今後の成長や挑戦に関して真剣に考えてくださる姿勢や社員一人ひとりを大切にしている
+                                    ことが言葉の節々から伝わり、そのような方々と一緒に働ける環境であれば、安心して自分も成長できると感じ、ぜひこの会社でキャリアを築きたいと思いました。
+                                  </p>
+                                </section>
+                              </dd>
+                            </dl>
+                          </section>
+                        </div>
+
+                        <!-- member 02 -->
+                        <div class="swiper-slide">
+                          <section class="presentation__item">
+                            <div class="presentation__itemImage">
+                              <img
+                                src="./img/members/img_member_02.png"
+                                alt="Y.Kさんの写真"
+                              />
+                            </div>
+                            <dl>
+                              <dt class="presentation__itemHeaderText">Y.K</dt>
+                              <dd class="presentation__itemText">エンジニア</dd>
+                              <dd class="presentation__itemText">
+                                入社：2017年11月
+                              </dd>
+                              <dd class="presentation__itemDescription">
+                                <section class="interview__content">
+                                  <h3>前職</h3>
+                                  <p>新卒入社</p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>業務内容</h3>
+                                  <p>
+                                    UI/UX改修、要件定義、マークアップ、Webデザイン
+                                  </p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>EBAテックを選んだ理由</h3>
+                                  <p>
+                                    ハローワークでいくつかの会社を探し面談して頂いたなかで、1番社長の人柄がよくて社員のことをよく見て考えていると感じたから。また、会社の将来性だけでなく自身の将来や成長についても考えていると感じたため。
+                                  </p>
+                                </section>
+                              </dd>
+                            </dl>
+                          </section>
+                        </div>
+
+                        <!-- member 03 -->
+                        <div class="swiper-slide">
+                          <section class="presentation__item">
+                            <div class="presentation__itemImage">
+                              <img
+                                src="./img/members/img_member_03.png"
+                                alt="T.Kさんの写真"
+                              />
+                            </div>
+
+                            <dl>
+                              <dt class="presentation__itemHeaderText">T.K</dt>
+                              <dd class="presentation__itemText">営業</dd>
+                              <dd class="presentation__itemText">
+                                入社：2016年10月
+                              </dd>
+                              <dd class="presentation__itemDescription">
+                                <section class="interview__content">
+                                  <h3>前職</h3>
+                                  <p>
+                                    行政機関にて主に国主導のスポーツイベント開催に向けた準備業務（企画、連絡調整、PR
+                                    活動など）
+                                    。その他にもスポーツ指導、スポーツイベント運営、英語指導などの教育関係に従事。
+                                  </p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>業務内容</h3>
+                                  <p>
+                                    BtoBイベントプラットフォームのプロトタイプ
+                                    フロントエンド開発
+                                  </p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>EBAテックを選んだ理由</h3>
+                                  <p>
+                                    最初の面接でいきなり社長が登場し、2時間ほど費やしてじっくり話し合うことができた。業界未経験の自分にとって業界に潜り込むまたとないチャンスと感じた。また、社長の真摯に人に向き合う姿勢と仕事に対する情熱が1社目にして入社を決断する決め手となった。
+                                  </p>
+                                </section>
+                              </dd>
+                            </dl>
+                          </section>
+                        </div>
+
+                        <!-- member 04 -->
+                        <div class="swiper-slide">
+                          <section class="presentation__item">
+                            <img
+                              src="./img/members/img_member_04.png"
+                              alt="S.Sさんの写真"
+                              class="presentation__itemImage"
+                            />
+                            <dl>
+                              <dt class="presentation__itemHeaderText">S.S</dt>
+                              <dd class="presentation__itemText">エンジニア</dd>
+                              <dd class="presentation__itemText">
+                                入社：2018年
+                              </dd>
+                              <dd class="presentation__itemDescription">
+                                <section class="interview__content">
+                                  <h3>前職</h3>
+                                  <p>引越屋</p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>業務内容</h3>
+                                  <p>介護系アプリの追加機能開発、障害対応</p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>EBAテックを選んだ理由</h3>
+                                  <p>
+                                    社員の声を色々見ていて気になったような記憶があります。社内交流のことだったかなんだったか…とにかく評判が良さそうに思えたので応募したんだと思います。
+                                  </p>
+                                </section>
+                              </dd>
+                            </dl>
+                          </section>
+                        </div>
+
+                        <!-- member 05 -->
+                        <div class="swiper-slide">
+                          <section class="presentation__item">
+                            <img
+                              src="./img/members/img_member_05.png"
+                              alt="Y.Yさんの写真"
+                              class="presentation__itemImage"
+                            />
+                            <dl>
+                              <dt class="presentation__itemHeaderText">Y.Y</dt>
+                              <dd class="presentation__itemText">エンジニア</dd>
+                              <dd class="presentation__itemText">
+                                入社：2020年
+                              </dd>
+                              <dd class="presentation__itemDescription">
+                                <section class="interview__content">
+                                  <h3>前職</h3>
+                                  <p>アパレル業界</p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>業務内容</h3>
+                                  <p>チケット販売システム</p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>EBAテックを選んだ理由</h3>
+                                  <p>
+                                    EBAの「お客様を幸せにする」という理念が、自分自身がITを通して実現したい価値と一致していると感じたからです。
+                                    また、社長のお話から、人を大切にする姿勢や情熱が伝わり、この方のもとで働きたいと思いました。
+                                  </p>
+                                </section>
+                              </dd>
+                            </dl>
+                          </section>
+                        </div>
+
+                        <!-- member 06 -->
+                        <div class="swiper-slide">
+                          <section class="presentation__item">
+                            <img
+                              src="./img/members/img_member_nofigure.png"
+                              alt="S.Oさんの写真"
+                              class="presentation__itemImage"
+                            />
+                            <dl>
+                              <dt class="presentation__itemHeaderText">S.O</dt>
+                              <dd class="presentation__itemText">エンジニア</dd>
+                              <dd class="presentation__itemText">
+                                入社：2019年
+                              </dd>
+                              <dd class="presentation__itemDescription">
+                                <section class="interview__content">
+                                  <h3>前職</h3>
+                                  <p>警備会社</p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>業務内容</h3>
+                                  <p>
+                                    新規事業のフリーランス事業で窓口業務や面談対応
+                                  </p>
+                                </section>
+
+                                <section class="interview__content">
+                                  <h3>EBAテックを選んだ理由</h3>
+                                  <p>
+                                    研修制度があり未経験で入社しても、スキルが付けられ、アフターフォローなどが充実していそうだったため。
+                                    会社の風通しが良さそうで、社員同士の仲も良さそうだったため。
+                                  </p>
+                                </section>
+                              </dd>
+                            </dl>
+                          </section>
+                        </div>
+                      </div>
+                      <!-- /swiper-wrapper -->
+                      <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- /swiper -->
+                  </div>
                 </div>
-              </section>
+              </div>
             </div>
 
             <!-- communication -->
