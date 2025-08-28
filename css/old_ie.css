@@ -1,0 +1,36 @@
+/**************** ヘッダー内コンテンツ *****************/
+
+.saiyou_header_top{
+	overflow:hidden;
+}
+
+.saiyou_header_logo{
+	width:110px;
+	text-align:center;
+	float:left;
+}
+
+.saiyou_header ul.saiyou_gnavi{
+	float:right;
+}
+
+.saiyou_header ul.saiyou_gnavi li{
+	display:inline-block;
+}
+
+/**************** ヘッダー内コンテンツ end *****************/
+
+
+.saiyou_header_bottom li{
+	display:inline-block;
+}
+
+
+/**************** eba_yt *****************/
+
+#eba_yt{
+	display:none;
+}
+
+/**************** eba_yt end *****************/
+
