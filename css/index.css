@@ -789,7 +789,7 @@ body {
   margin: 0 auto;
 }
 #interview__container .presentation__headerText {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 #interview__container .presentation__itemText {
@@ -797,42 +797,39 @@ body {
   display: block;
   float: left;
   margin-right: 8px;
+  margin-bottom: 1em;
 }
 
 #interview__container .presentation__items {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 #interview__container .presentation__item {
-  /* width: 294px; */
-  /* width: calc(960px / 4 * 3); */
-  min-height: 640px;
   background-color: var(--color-white);
   border-radius: 16px;
   box-shadow: 0 0 4px rgba(0, 28, 84, 15%);
   margin: 0 10px;
+  min-height: 680px;
 }
 
 #interview__container .presentation__item dl {
-  padding: 20px 24px 24px;
+  padding: 20px 24px 8px;
 }
 
 #interview__container .presentation__itemDescription {
   clear: left;
-  display: flex;
-  column-gap: 5%;
-  padding-top: 16px;
 }
 #interview__container .interview__content {
-  width: 30%;
+  width: 100%;
 }
 #interview__container .interview__content h3 {
   font: var(--text-Text16_B);
-  margin-bottom: 0.25em;
+  margin-bottom: 0.1em;
 }
 #interview__container .interview__content p {
   font: var(--text-Text14_R);
-  line-height: 1.5;
+  line-height: 1.4;
+  margin-bottom: 1em;
 }
 
 #interview__container .presentation__itemImage {
@@ -1292,11 +1289,11 @@ For smartphone
   /* interview */
 
   #interview__wrapper {
-    margin-bottom: 2em;
+    margin-bottom: 0em;
   }
 
   #interview__container {
-    padding: 0 0 2rem;
+    padding: 0 0 3em;
   }
   #interview__container .presentation__headerText {
     margin-bottom: 1em;
@@ -1328,17 +1325,17 @@ For smartphone
     background-color: var(--color-white);
     border-radius: 16px;
     box-shadow: 0 0 4px rgba(0, 28, 84, 15%);
-    margin: 0 auto 3em;
+    margin: 0 auto;
     min-height: auto;
     overflow: hidden;
   }
 
   #interview__container .presentation__item dl {
-    padding: 0 1.5em 1.5em;
+    padding: 0 1.5em;
   }
 
   #interview__container .presentation__item:nth-child(odd) {
-    margin-top: 0;
+    /* margin-top: 0; */
   }
 
   #interview__container .presentation__itemImage {
@@ -1353,7 +1350,7 @@ For smartphone
 
   #interview__container .interview__content h3 {
     font: var(--text-Text16_B);
-    margin: 1em 0 0.2em;
+    margin: 0 0 0.2em;
   }
 
   #interview__container .link__type2 {

@@ -1,14 +1,27 @@
 const elems = {
   headerContainer: null,
 };
-let isMobile = false;
+let props = {
+  isMobile: false,
+  swiper: null,
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   elems.headerContainer = document.querySelector("#header__container");
   initializeSwipper();
 
-  const removeMQEvent = MediaQuery.matches(767, (isMQmatched) => {
-    isMobile = isMQmatched;
+  const removeMQEvent = MediaQuery.matches(767, (isWideScreen) => {
+    props.isMobile = !isWideScreen;
+
+    if (props.isMobile) {
+      if (props.swiper != null) {
+        props.swiper.autoplay.pause();
+      }
+    } else {
+      if (props.swiper != null) {
+        props.swiper.autoplay.start();
+      }
+    }
   });
 });
 
@@ -55,17 +68,8 @@ function initializeSwipper() {
     },
   };
 
-  // if (!isMobile) {
-  //   options.autoplay = {
-  //     delay: 3000,
-  //     disableOnInteraction: false,
-  //     pauseOnMouseEnter: true,
-  //   };
-  // } else {
-  //   delete options.autoplay;
-  // }
-
-  const swiper = new Swiper(".swiper", options);
+  props.swiper = new Swiper(".swiper", options);
+  props.swiper.autoplay.stop();
 
   for (let i = 0; i < slides.length; i++) {
     const target = slides[i];
@@ -85,11 +89,17 @@ function initializeSwipper() {
 
     content.setAttribute("id", id);
 
-    swiper.on("slideChange", () => {
+    props.swiper.on("slideChange", () => {
       if (id != null) {
-        // content.style.setProperty("--dynamic-height", "1px");
+        for (let i = 0; i < slides.length; i++) {
+          const content = slides[i].querySelector(
+            ".presentation__itemDescription"
+          );
 
-        MicroModal.close(`${id}`);
+          content.style.setProperty("--dynamic-height", "1px");
+
+          MicroModal.close(`${id}`);
+        }
       }
     });
   }
